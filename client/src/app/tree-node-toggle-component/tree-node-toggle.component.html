@@ -1,0 +1,8 @@
+<!-- tree-node-toggle.component.html -->
+<button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name"
+  (click)="toggle.emit(node)">
+  <mat-icon class="mat-icon-rtl-mirror">
+    {{ node.expanded ? 'expand_more' : 'chevron_right' }}
+  </mat-icon>
+</button>
+{{ node.name }}

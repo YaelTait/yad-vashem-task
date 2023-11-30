@@ -1,0 +1,26 @@
+/* tree-component.component.scss */
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.tree-column {
+  width: 25%;
+  padding: 16px;
+  font-size: 12px;
+  background-color :rgb(226, 240, 245);
+}
+
+.mat-divider-vertical {
+  height: 100%;
+  margin: 0 16px; /* Adjust margin as needed for spacing */
+}
+
+.files-column {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  text-align: center;
+  flex-direction: column; /* Change to row to stack files horizontally */
+}

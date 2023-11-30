@@ -1,0 +1,18 @@
+<!-- right-panel.component.html -->
+<div *ngIf="filesToDisplay.length > 0; else noFiles">
+  <div *ngFor="let file of filesToDisplay">
+    <div class="file-card-container" *ngIf="file.type === '.JPG'">
+      <!-- Display JPG files -->
+      <img class="file-card" [src]="file.path" alt="{{file.path}}">
+      <div class="file-name">{{file.name}}</div>
+    </div>
+    <div class="unsupported-file" *ngIf="file.type !== '.JPG'">
+      Unsupported format: {{file.name}}
+    </div>
+  </div>
+</div>
+<ng-template #noFiles>
+  <div class="no-files-message">
+    <p>No files to display</p>
+  </div>
+</ng-template>
